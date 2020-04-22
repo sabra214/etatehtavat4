@@ -7,17 +7,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <title>Listaa asiakkaat</title>
 <style>
-.oikealle{
-	text-align: right;
+#listaus {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
+
+#listaus td, #listaus th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#listaus tr:nth-child(even){background-color: #f2f2f2;}
+
+#lisatus tr:hover {background-color: #ddd;}
+
+#listaus th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
 </style>
 </head>
 <body>
 <table id="listaus">
 	<thead>	
 		<tr>
-			<th class="oikealle">Hakusana:</th>
-			<th colspan="2"><input type="text" id="hakusana"></th>
+			<th colspan="2">Hakusana:</th>
+			<th><input type="text" id="hakusana"></th>
 			<th><input type="button" value="Hae" id="hakunappi"></th>
 		</tr>			
 		<tr>
